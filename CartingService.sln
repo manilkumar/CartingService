@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csproj", "{168A7B14-ED5A-4684-B0E9-20D1D28A8488}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CartServiceTest", "CartServiceTest\CartServiceTest.csproj", "{51E8494B-26DC-495D-947C-09965F19A9DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{168A7B14-ED5A-4684-B0E9-20D1D28A8488}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{168A7B14-ED5A-4684-B0E9-20D1D28A8488}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{168A7B14-ED5A-4684-B0E9-20D1D28A8488}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{168A7B14-ED5A-4684-B0E9-20D1D28A8488}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51E8494B-26DC-495D-947C-09965F19A9DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51E8494B-26DC-495D-947C-09965F19A9DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51E8494B-26DC-495D-947C-09965F19A9DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51E8494B-26DC-495D-947C-09965F19A9DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {661BA6DA-020F-4CFB-9DB5-800280DF7E88}
+	EndGlobalSection
+EndGlobal
