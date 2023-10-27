@@ -30,9 +30,9 @@ namespace Application.Services
             throw new Exception("Add Error");
         }
 
-        public async Task<string> RemoveItem(int? itemId, CancellationToken cancellationToken = default)
+        public async Task<string> RemoveItem(Guid? cartId, int? itemId, CancellationToken cancellationToken = default)
         {
-            await _cartRepository.RemoveItem(itemId);
+            await _cartRepository.RemoveItem(cartId, itemId);
             return "Item deleted from Cart";
         }
     }

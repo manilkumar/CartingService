@@ -8,6 +8,6 @@ namespace Application.ServiceInterfaces
 
         Task<(IEnumerable<Item> entities, string Message)> GetAllItems(Guid? cartId, CancellationToken cancellationToken = default);
 
-        Task<string> RemoveItem(int? itemId, CancellationToken cancellationToken = default);
+        Task<string> RemoveItem(Guid? cartId, int? itemId, CancellationToken cancellationToken = default);
     }
 }

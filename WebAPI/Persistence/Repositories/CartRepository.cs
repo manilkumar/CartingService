@@ -14,30 +14,23 @@ namespace Persistence.Repositories
             _liteDbContext = liteDbContext;
         }
 
-        public async ValueTask<Item?> GetById(int? itemId)
-        {
-            var collection = _liteDbContext.GetCollection<Item>("Items");
-
-            return collection.FindById(itemId);
-        }
-
         public async ValueTask<List<Item>> GetCartItems(Guid? cartId)
         {
             var collection = _liteDbContext.GetCollection<Item>("Items");
 
-            return collection.Find(Query.EQ("CartId",cartId)).ToList();
+            return collection.Find(Query.EQ("CartId", cartId)).ToList();
         }
 
         public async Task AddItem(Cart entity)
         {
             var collection = _liteDbContext.GetCollection<Item>("Items");
-
+            entity.CartItem.CartId = entity.CartId;
             collection.Insert(entity.CartItem);
         }
 
-        public async Task RemoveItem(int? itemId)
+        public async Task RemoveItem(Guid? cartId, int? itemId)
         {
-            var collection = _liteDbContext.GetCollection<Item>("Items");
+            var collection = (ILiteCollection<Item>)await GetCartItems(cartId);
 
             collection.Delete(itemId);
         }

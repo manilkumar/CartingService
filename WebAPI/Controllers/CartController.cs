@@ -37,9 +37,9 @@ namespace WebAPI.Controllers
 
         // DELETE api/<CartController>/5
         [HttpDelete("DeleteItem/{itemId}")]
-        public async Task<IActionResult> DeleteItem(int? itemId)
+        public async Task<IActionResult> DeleteItem(Guid? cartId, int? itemId)
         {
-            var result = await _serviceManager.CartService.RemoveItem(itemId);
+            var result = await _serviceManager.CartService.RemoveItem(cartId,itemId);
             return Ok(result);
         }
     }
